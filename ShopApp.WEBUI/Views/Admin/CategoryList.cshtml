@@ -1,0 +1,63 @@
+﻿@model ShopApp.WEBUI.Models.CategoryListViewModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>index</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    @if (TempData["message"] != null)
+    {
+        var message = Newtonsoft.Json.JsonConvert.DeserializeObject<ShopApp.WEBUI.Models.AlertMessage>(TempData["message"] as String);
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-@message.AlertType">
+                    @message.Message
+                </div>
+            </div>
+        </div>
+    }
+    <a href="/admin/CreateCategories" class="btn btn-primary">AddCategory</a>
+
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <td style="width:30px;">Id</td>
+                <td style="width:100px;">CategoryName</td>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.Categories.Count > 0)
+            {
+                @foreach (var item in Model.Categories)
+                {
+                    <tr>
+                        <td>@item.CategoryID</td>
+                        <td>@item.CategoryName</td>
+                        <td>
+                            <a href="/admin/EditCategories/@item.CategoryID" class="btn btn-primary">Edit</a>
+                            <form action="/admin/DeleteCategory/@item.CategoryID" method="post" style="display: inline;">
+                                <input type="hidden" name="categoryId" value="@item.CategoryID" />
+                                <button type="submit" class="btn btn-danger">Delete</button>
+
+                            </form>
+                        </td>
+                    </tr>
+
+                }
+
+
+            }
+        </tbody>
+    </table>
+
+</body>
+</html>

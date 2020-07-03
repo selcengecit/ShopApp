@@ -1,0 +1,38 @@
+﻿
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model shopapp.entity.Product
+
+<div class="card">
+    <img class="card-img-top" src="https://productimages.hepsiburada.net/s/6/460/9713620058162.jpg" alt="" />
+    <div class="card-body">
+        <h5 class="card-title">@Model.ProductName</h5>
+        <small class="text-muted">
+            <i class="fas fa-lira-sign"></i>@Model.UnitPrice
+        </small>
+    </div>
+    <div class="card-footer text-center">
+        <a asp-controller="Shop" asp-action="Details" asp-route-id="@Model.ProductID" class="btn btn-primary">Detail</a>
+
+
+        @if (User.Identity.IsAuthenticated)
+        {
+
+            <form asp-controller="Cart" asp-action="AddToCart" style="display:inline;">
+                <input type="hidden" name="productId" value="@Model.ProductID" />
+                <div class="input-group mb-3">
+                    <input type="number" name="quantity" class="form-control " value="1" step="1" />
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-cart-plus"></i>AddToCart
+                        </button>
+                    </div>
+
+                </div>
+
+            </form>
+        }
+
+
+
+    </div>
+</div>

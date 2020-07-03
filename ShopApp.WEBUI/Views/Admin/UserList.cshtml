@@ -1,0 +1,76 @@
+﻿@using Microsoft.AspNetCore.Identity
+@model IEnumerable<ShopApp.WEBUI.Identity.User>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>index</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="h3">Users</h1>
+            <hr />
+            <a class="btn btn-primary btn-sm" href="Admin/UserCreate">User Create</a>
+            <table id="myTable" class="table table-bordered mt-3">
+
+                <thead>
+                    <tr>
+                        <td style="width: 30px;">FirstName</td>
+                        <td style="width: 100px;">LastName</td>
+                        <td style="width: 100px;">UserName</td>
+                        <td style="width: 100px;">Email</td>
+                        <td style="width: 100px;">EmailConfirmed</td>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr class="@(item.EmailConfirmed?"":"bg-warning")">
+                            <td>@item.FirstName</td>
+                            <td>@item.LastName</td>
+                            <td>@item.UserName</td>
+                            <td>@item.Email</td>
+                            <td>@item.EmailConfirmed</td>
+                            <td>
+                                <a href="/Admin/UserEdit/@item.Id" class="btn btn-primary btn-sm mr-2">EditUser</a>
+                                <form action="/Admin/DeleteUser" method="post">
+                                    <input type="hidden" name="UserId" value="@item.Id" />
+                                    <button type="submit" class="btn btn-danger btn-sm">DeleteUser</button>
+                                </form>
+
+                            </td>
+                        </tr>
+
+
+
+
+                    }
+                </tbody>
+            </table>
+
+
+
+        </div>
+    </div>
+</body>
+</html>
+
+
+<script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#myTable').DataTable();
+    });
+</script>
+

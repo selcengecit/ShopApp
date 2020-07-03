@@ -1,0 +1,13 @@
+﻿@model ShopApp.WEBUI.Models.CategoryListViewModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<div class="list-group">
+    <a asp-controller="Shop" asp-action="List" class="list-group-item list-group-item-action">Tüm Kategoriler</a>
+    @foreach (var category in Model.Categories)
+    {
+        <a asp-controller="Shop" asp-action="List" asp-route-id="@category.CategoryID">
+            @category.CategoryName
+        </a>
+
+    }
+</div>

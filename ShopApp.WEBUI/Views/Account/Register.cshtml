@@ -1,0 +1,72 @@
+﻿
+@model ShopApp.WEBUI.Models.RegisterModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>index</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        p{
+            color:red;
+        }
+    </style>
+</head>
+<h1 class="h3">Register</h1>
+<body>
+    <p>@ViewBag.Message</p>
+    @*<p>@ViewBag.Token</p>*@
+</body>
+<hr />
+<div class="row">
+    <div class="col-md-8">
+       
+        <form asp-controller="Account" asp-action="Register" method="post">
+            <div class="form-group row">
+                <label asp-for="FirstName" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" asp-for="FirstName">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="LastName" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" asp-for="LastName">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="UserName" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" asp-for="UserName">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="Password" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" asp-for="Password">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="RePassword" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" asp-for="RePassword">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="Email" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" asp-for="Email">
+                </div>
+            </div>
+
+
+            <div class="form-group row">
+                <div class="col-sm-10 offset sm-2">
+                    <button type="submit" class="btn btn-primary">Save Register</button>
+                </div>
+            </div>
+           
+
+        </form>
+    </div>
+</div>

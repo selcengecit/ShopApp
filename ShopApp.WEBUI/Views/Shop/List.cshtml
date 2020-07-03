@@ -1,0 +1,51 @@
+﻿@model ShopApp.WEBUI.Models.ProductListViewModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>index</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    @await Html.PartialAsync("_navbar")
+    <div class="row">
+        <div class="col-md-3">
+            @*@await Component.InvokeAsync("Categories")*@
+        </div>
+        <div class="col-md-9">
+            <div class="row">
+                @foreach (var product in Model.Products)
+                {
+                    <div class="col-md-4">
+                        @await Html.PartialAsync("_product", product)
+                    </div>
+
+                }
+            </div>
+            <div class="row">
+                <div class="col">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            @for (int i = 0; i < Model.pageInfo.TotalPages(); i++)
+                            {
+
+                                <li class="page-item @(Model.pageInfo.CurrentPage==i+1?" active":"")"><a class="page-link" href="/products?page=@(i+1)">@(i+1)</a></li>
+                            }
+                            <li class="page-item "><a class="page-link" href="products?page=@(Model.pageInfo.CurrentPage+1)">Next</a></li>
+
+
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

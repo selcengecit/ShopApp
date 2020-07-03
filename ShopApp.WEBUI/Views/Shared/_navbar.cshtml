@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Anasayfa</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="container">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ShopApp</a>
+            
+                    <ul class="navbar-nav flex-grow-1 mr-auto">
+                        <li class="nav-item">
+                            <a href="/shop/list" class="nav-link">Products</a>
+                        </li>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <a href="/cart/index" class="nav-link">Cart</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Orders</a>
+                            </li>
+                            @if (User.IsInRole("Admin"))
+                            {
+                                <li class="nav-item">
+                                    <a href="/product/list" class="nav-link">Admin Products</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="nav-link">Cart</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/admin/CreateProduct" class="nav-link">Add Product</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/admin/CategoryList" class="nav-link">Admin Categories</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/admin/CreateCategories" class="nav-link">Add Categories</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/admin/RoleList" class="nav-link">Roles</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/admin/UserList" class="nav-link">Users</a>
+                                </li>
+
+                            }
+
+
+                        }
+
+                    </ul>
+
+                    <ul class="navbar-nav flex-grow-1 ml-auto">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <a href="/account/manage" class="nav-link">@User.Identity.Name</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="/account/logout" class="nav-link">Logout</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a href="/account/Login" class="nav-link">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/account/register" class="nav-link">Register</a>
+                            </li>
+                        }
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    </body>
+</html>

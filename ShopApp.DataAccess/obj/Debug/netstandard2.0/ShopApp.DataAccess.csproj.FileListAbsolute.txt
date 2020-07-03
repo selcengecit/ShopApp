@@ -1,0 +1,12 @@
+C:\Users\selcuk\source\repos\ShopApp\ShopApp.DataAccess\bin\Debug\netstandard2.0\Shopapp.Entity.dll
+C:\Users\selcuk\source\repos\ShopApp\ShopApp.DataAccess\obj\Debug\netstandard2.0\ShopApp.DataAccess.csprojAssemblyReference.cache
+C:\Users\selcuk\source\repos\ShopApp\ShopApp.DataAccess\obj\Debug\netstandard2.0\ShopApp.DataAccess.AssemblyInfoInputs.cache
+C:\Users\selcuk\source\repos\ShopApp\ShopApp.DataAccess\obj\Debug\netstandard2.0\ShopApp.DataAccess.AssemblyInfo.cs
+C:\Users\selcuk\source\repos\ShopApp\ShopApp.DataAccess\bin\Debug\netstandard2.0\ShopApp.DataAccess.deps.json
+C:\Users\selcuk\source\repos\ShopApp\ShopApp.DataAccess\bin\Debug\netstandard2.0\ShopApp.DataAccess.dll
+C:\Users\selcuk\source\repos\ShopApp\ShopApp.DataAccess\bin\Debug\netstandard2.0\ShopApp.DataAccess.pdb
+C:\Users\selcuk\source\repos\ShopApp\ShopApp.DataAccess\bin\Debug\netstandard2.0\Shopapp.Entity.pdb
+C:\Users\selcuk\source\repos\ShopApp\ShopApp.DataAccess\obj\Debug\netstandard2.0\ShopApp.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\selcuk\source\repos\ShopApp\ShopApp.DataAccess\obj\Debug\netstandard2.0\ShopApp.DataAccess.csproj.CopyComplete
+C:\Users\selcuk\source\repos\ShopApp\ShopApp.DataAccess\obj\Debug\netstandard2.0\ShopApp.DataAccess.dll
+C:\Users\selcuk\source\repos\ShopApp\ShopApp.DataAccess\obj\Debug\netstandard2.0\ShopApp.DataAccess.pdb

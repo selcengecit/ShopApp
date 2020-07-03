@@ -1,0 +1,14 @@
+C:\Users\selcuk\source\repos\ShopApp\ShopApp.Business\bin\Debug\netstandard2.0\ShopApp.Business.deps.json
+C:\Users\selcuk\source\repos\ShopApp\ShopApp.Business\bin\Debug\netstandard2.0\ShopApp.Business.dll
+C:\Users\selcuk\source\repos\ShopApp\ShopApp.Business\bin\Debug\netstandard2.0\ShopApp.Business.pdb
+C:\Users\selcuk\source\repos\ShopApp\ShopApp.Business\bin\Debug\netstandard2.0\ShopApp.DataAccess.dll
+C:\Users\selcuk\source\repos\ShopApp\ShopApp.Business\bin\Debug\netstandard2.0\Shopapp.Entity.dll
+C:\Users\selcuk\source\repos\ShopApp\ShopApp.Business\bin\Debug\netstandard2.0\ShopApp.DataAccess.pdb
+C:\Users\selcuk\source\repos\ShopApp\ShopApp.Business\bin\Debug\netstandard2.0\Shopapp.Entity.pdb
+C:\Users\selcuk\source\repos\ShopApp\ShopApp.Business\obj\Debug\netstandard2.0\ShopApp.Business.csprojAssemblyReference.cache
+C:\Users\selcuk\source\repos\ShopApp\ShopApp.Business\obj\Debug\netstandard2.0\ShopApp.Business.csproj.CoreCompileInputs.cache
+C:\Users\selcuk\source\repos\ShopApp\ShopApp.Business\obj\Debug\netstandard2.0\ShopApp.Business.AssemblyInfoInputs.cache
+C:\Users\selcuk\source\repos\ShopApp\ShopApp.Business\obj\Debug\netstandard2.0\ShopApp.Business.AssemblyInfo.cs
+C:\Users\selcuk\source\repos\ShopApp\ShopApp.Business\obj\Debug\netstandard2.0\ShopApp.Business.csproj.CopyComplete
+C:\Users\selcuk\source\repos\ShopApp\ShopApp.Business\obj\Debug\netstandard2.0\ShopApp.Business.dll
+C:\Users\selcuk\source\repos\ShopApp\ShopApp.Business\obj\Debug\netstandard2.0\ShopApp.Business.pdb

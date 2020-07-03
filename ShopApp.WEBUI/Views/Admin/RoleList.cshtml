@@ -1,0 +1,59 @@
+﻿@using Microsoft.AspNetCore.Identity
+@model IEnumerable<IdentityRole>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>index</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="h3">Admin Roles</h1>
+            <hr />
+           
+            <table class="table table-bordered mt-3">
+                <a class="btn btn-primary btn-sm" href="Admin/RoleCreate">Create Role</a>
+                <thead>
+                    <tr>
+                        <td style="width: 30px;">Id</td>
+                        <td style="width: 100px;">RoleName</td>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td>@item.Name</td>
+                            <td>
+                                <a href="/Admin/RoleEdit/@item.Id" class="btn btn-primary btn-sm mr-2">EditRole</a>
+                                <form action="/Admin/DeleteRole" method="post">
+                                    <input type="hidden" name="Id" value="@item.Id" />
+                                    <button type="submit" class="btn btn-danger btn-sm">DeleteRole</button>
+                                </form>
+
+                            </td>
+                        </tr>
+
+
+
+
+                    }
+                </tbody>
+            </table>
+
+
+
+        </div>
+    </div>
+</body>
+
+
+</html>

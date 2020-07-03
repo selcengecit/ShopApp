@@ -1,0 +1,35 @@
+﻿@model ShopApp.WEBUI.Models.ProductListViewModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>index</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-3">
+            @*@await Component.InvokeAsync("Categories")*@
+        </div>
+        <div class="col-md-9">
+            <div class="row">
+                @foreach (var product in Model.Products)
+                {
+                    <div class="col-md-4">
+                        @await Html.PartialAsync("_product", product)
+                    </div>
+
+                }
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+</html>

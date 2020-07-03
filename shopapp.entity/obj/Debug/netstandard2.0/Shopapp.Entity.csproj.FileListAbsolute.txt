@@ -1,0 +1,9 @@
+C:\Users\selcuk\source\repos\ShopApp\shopapp.entity\bin\Debug\netstandard2.0\Shopapp.Entity.deps.json
+C:\Users\selcuk\source\repos\ShopApp\shopapp.entity\bin\Debug\netstandard2.0\Shopapp.Entity.dll
+C:\Users\selcuk\source\repos\ShopApp\shopapp.entity\bin\Debug\netstandard2.0\Shopapp.Entity.pdb
+C:\Users\selcuk\source\repos\ShopApp\shopapp.entity\obj\Debug\netstandard2.0\Shopapp.Entity.csprojAssemblyReference.cache
+C:\Users\selcuk\source\repos\ShopApp\shopapp.entity\obj\Debug\netstandard2.0\Shopapp.Entity.csproj.CoreCompileInputs.cache
+C:\Users\selcuk\source\repos\ShopApp\shopapp.entity\obj\Debug\netstandard2.0\Shopapp.Entity.AssemblyInfoInputs.cache
+C:\Users\selcuk\source\repos\ShopApp\shopapp.entity\obj\Debug\netstandard2.0\Shopapp.Entity.AssemblyInfo.cs
+C:\Users\selcuk\source\repos\ShopApp\shopapp.entity\obj\Debug\netstandard2.0\Shopapp.Entity.dll
+C:\Users\selcuk\source\repos\ShopApp\shopapp.entity\obj\Debug\netstandard2.0\Shopapp.Entity.pdb

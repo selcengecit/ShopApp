@@ -1,0 +1,35 @@
+﻿@model ShopApp.WEBUI.Models.ProductDetailModel
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>index</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div class="row">
+        <div class="row no gutters">
+            <div class="col-md-3">
+                <img class="img-fluid" src="https://productimages.hepsiburada.net/s/6/460/9713620058162.jpg" alt="" />
+            </div>
+            <div class="col-md-9">
+                <h1 class="mb-3">@Model.Product.ProductName</h1> <hr />
+
+                <a href="#" class="btn btn-link p-0 mb-3">@Model.Product.CategoryID</a>
+
+
+                <div class="mb-3">
+                    <h4 class="text-primary mb-3">@Model.Product.UnitPrice</h4>
+                    <button type="submit" class="btn btn-primary btn-lg">AddToCart</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="p-3">xxxxx</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
